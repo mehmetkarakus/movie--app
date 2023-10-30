@@ -1,0 +1,67 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body,
+html {
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Playpen Sans', cursive;
+    background-color: #000000;
+}
+
+a {
+    text-decoration: none;
+}
+
+section.header {
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #000000;
+}
+
+.header--title a {
+    font-family: 'Playpen Sans', cursive;
+}
+
+.header--menu ul,
+li,
+a {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    font-size: 18px;
+    color: #efff1e;
+}
+
+main {
+    margin: 50px;
+}
+
+.main--title h3 {
+    padding-bottom: 15px;
+    color: rgb(255, 255, 255);
+}
+
+.main--card {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+    justify-content: center;
+    align-items: center;
+    gap: 65px;
+}
+
+.card--img img {
+    padding: 5px;
+    border-radius: 15px;
+    background-color: rgb(76, 76, 76);
+}
+
+.card--title {
+    color: #ffffff;
+    text-align: center;
+}
