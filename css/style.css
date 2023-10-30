@@ -65,3 +65,37 @@ main {
     color: #ffffff;
     text-align: center;
 }
+
+.card--img {
+    padding: 10px;
+    width: 300px;
+    height: 450px;
+    border-radius: 10px;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: 1s;
+    transform-style: preserve-3d;
+    background: violet;
+    transform: rotateY(0deg);
+}
+
+.card--title {
+    padding: 10px;
+    width: 300px;
+    height: 450px;
+    border-radius: 10px;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: 1s;
+    transform-style: preserve-3d;
+    background: tomato;
+    transform: rotateY(180deg);
+}
+
+.card:hover .card--img {
+    transform: rotateY(180deg);
+}
+
+.card:hover .card--title {
+    transform: rotateY(0deg);
+}
