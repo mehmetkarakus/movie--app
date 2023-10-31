@@ -7,8 +7,8 @@ body,
 html {
     width: 100%;
     font-family: 'Open Sans', sans-serif;
-    font-family: 'Playpen Sans', cursive;
-    background-color: #000000;
+    font-family: 'Barlow', sans-serif;
+    background-color: #0F0E0E;
 }
 
 a {
@@ -20,10 +20,12 @@ section.header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #000000;
 }
 
-.header--title a {
+.header--title a,
+h2 {
+    font-size: 21px;
+    color: #FF0000;
     font-family: 'Playpen Sans', cursive;
 }
 
@@ -34,11 +36,11 @@ a {
     gap: 10px;
     list-style: none;
     font-size: 18px;
-    color: #efff1e;
+    color: #FF0000;
 }
 
-main {
-    margin: 50px;
+.container {
+    margin: 30px 80px;
 }
 
 .main--title h3 {
@@ -55,47 +57,102 @@ main {
     gap: 65px;
 }
 
-.card--img img {
-    padding: 5px;
+.card:hover .card--movie,
+.card.hover .card--movie {
+    transform: rotateY(180deg);
+}
+
+.card,
+.card--frondface {
+    width: 300px;
+    height: 450px;
     border-radius: 15px;
-    background-color: rgb(76, 76, 76);
+    position: relative;
 }
 
-.card--title {
-    color: #ffffff;
-    text-align: center;
-}
-
-.card--img {
-    padding: 10px;
-    width: 300px;
-    height: 450px;
-    border-radius: 10px;
-    position: absolute;
-    backface-visibility: hidden;
-    transition: 1s;
-    transform-style: preserve-3d;
-    background: violet;
+.card--frondface img {
+    z-index: 2;
     transform: rotateY(0deg);
-}
-
-.card--title {
-    padding: 10px;
     width: 300px;
     height: 450px;
-    border-radius: 10px;
-    position: absolute;
-    backface-visibility: hidden;
-    transition: 1s;
+    border-radius: 15px;
+}
+
+.card--movie {
+    transition: 0.4s;
     transform-style: preserve-3d;
-    background: tomato;
+    position: relative;
+}
+
+.card--backface {
+    border-radius: 15px;
+    color: white;
+    width: 300px;
+    height: 450px;
     transform: rotateY(180deg);
 }
 
-.card:hover .card--img {
-    transform: rotateY(180deg);
+.card--img img {
+    border-radius: 15px;
+    opacity: 0.3;
+    width: 300px;
+    height: 450px;
 }
 
-.card:hover .card--title {
-    transform: rotateY(0deg);
+.card--about {
+    position: absolute;
+    top: 5px;
+}
+
+.card--frondface,
+.card--backface {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.card--title {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+}
+
+.card--about h1 {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.card--about hr {
+    border: 1px solid #fff;
+}
+
+.card--about p {
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 8px;
+    align-items: center;
+}
+
+.chips {
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    align-items: center;
+    width: 23%;
+    border-radius: 15px;
+    padding: 4px 8px
+}
+
+.chips i {
+    font-size: 22px;
+}
+
+.chips p {
+    font-size: 12px;
+    padding: 0;
 }
